@@ -2,5 +2,5 @@
 <h2><a href="<%=new_coupon_path%>"> Create a New Coupon</a></h2>
 
 <% @coupons.each do |coupon| %>
-  <%= link_to coupon.store.to_s, coupon_path(coupon) %>
+<div> <%= link_to coupon.coupon_code, coupon_path(coupon) %>  | <%= coupon.store %></div>
 <% end %> <br>
