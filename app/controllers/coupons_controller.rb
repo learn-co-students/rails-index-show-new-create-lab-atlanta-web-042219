@@ -25,7 +25,7 @@ class CouponsController < ApplicationController
 
     def destroy
         Coupon.destroy(params[:id])
-        redirect_to '/coupons'
+        redirect_to coupons_path
     end
     
     def edit

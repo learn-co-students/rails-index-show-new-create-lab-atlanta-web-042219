@@ -1,16 +1,3 @@
-<%= form_tag coupons_path, method: :post do %>
-    <label> Coupon Code:</label>
-    <%=text_field_tag 'coupon[coupon_code]'%><br>
- 
-    <label> Store:</label>
-    <%=text_field_tag 'coupon[store]'%><br>
-    
-    <%=submit_tag("Add New Coupon") %>
-    <%= link_to 'Back', coupons_path, method: :get %>
-    <%end%>
-
-
-
-    # <% @coupon.errors.full_messages.each do |msg| %><br>
-    #     <%=msg%>
-    #     <%end%>
+<% @header_msg = 'Create new Coupon Form'%>
+<% @button_msg = 'Submit Coupon' %>
+<%= render 'form' %>
