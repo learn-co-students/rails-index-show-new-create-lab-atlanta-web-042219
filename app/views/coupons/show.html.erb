@@ -1,0 +1,8 @@
+<h1>
+<%= @coupon.coupon_code %><br>
+<%= @coupon.store %></h1>
+
+<%= link_to ' Edit', edit_coupon_path, method: :get %>
+<%= link_to 'Delete', coupon_path, method: :delete %>
+<%= link_to 'Back', coupons_path, method: :get %>
+

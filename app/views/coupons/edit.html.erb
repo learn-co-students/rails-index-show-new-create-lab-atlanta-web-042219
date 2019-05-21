@@ -1,0 +1,10 @@
+<%= form_tag coupon_path, method: :patch do %>
+    <label> Coupon Code:</label>
+    <%=text_field_tag 'coupon[coupon_code]'%><br>
+ 
+    <label> Store:</label>
+    <%=text_field_tag 'coupon[store]'%><br>
+    
+    <%=submit_tag("Submit") %>
+    <%= link_to 'Back', coupons_path, method: :get %>
+<% end %>
