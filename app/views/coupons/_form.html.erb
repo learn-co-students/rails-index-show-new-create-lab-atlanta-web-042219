@@ -1,0 +1,17 @@
+<h1><%= @header_msg %></h1>
+
+<ul>
+    <% @coupon.errors.full_messages.each do |error| %>
+        <li style="color: red;"><%= error %></li>
+    <% end %>
+</ul>
+
+<%= form_for(@coupon) do |f| %>
+  <label>Coupon Code</label><br>
+  <%= f.text_field :coupon_code %><br><br>
+
+  <label>Store</label><br>
+  <%= f.text_field :store %><br><br>
+
+  <%= f.submit @button_msg%>
+<% end %>
